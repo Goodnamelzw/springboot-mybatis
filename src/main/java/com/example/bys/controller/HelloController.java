@@ -1,12 +1,15 @@
 package com.example.bys.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
-    @RequestMapping("/hello")
-    public String hello() {
-        return "hello springboot";
+
+    @GetMapping("/hello")
+    @ResponseBody
+    public String hello(String username) {
+        System.out.println("hello" + username);
+        return "hello"+username;
+
     }
 }

@@ -24,7 +24,7 @@ public class UserServiceImpl {
     public void insertUser(UserEntity userEntity){
         userMapper.insertUser(userEntity);
     }
-    public void deleteUser(int id){
+    public void deleteUser(String id){
         userMapper.deleteUser(id);
     }
     public void updateUser(UserEntity userEntity){

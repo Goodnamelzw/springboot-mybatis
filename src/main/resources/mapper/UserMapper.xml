@@ -16,12 +16,12 @@
         insert into user (username,password,email) values (#{username},#{password},#{email})
     </insert>
 
-    <delete id="deleteUser" parameterType="java.lang.Integer">
-        delete from user where userid = #{id}
+    <delete id="deleteUser" parameterType="java.lang.String">
+        delete from user where username = #{username}
     </delete>
 
     <update id="updateUser" parameterType="com.example.bys.entity.UserEntity">
-        update user set username=#{username},password=#{password},email=#{email} where userid=#{userid}
+        update user set password=#{password},email=#{email} where username=#{username}
     </update>
 
 

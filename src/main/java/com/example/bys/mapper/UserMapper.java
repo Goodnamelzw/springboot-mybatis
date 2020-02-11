@@ -30,9 +30,9 @@ public interface UserMapper {
 
     /**
      *
-     * @param id 删除用户的id
+     * @param username 删除用户的username
      */
-    void deleteUser(int id);
+    void deleteUser(String username);
 
     /**
      *
